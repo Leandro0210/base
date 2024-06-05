@@ -4,6 +4,7 @@
 #include <vector>
 #include <map>
 #include <string>
+#include <set>
 using namespace std;
 struct fechas {
     int fe;
@@ -11,3 +12,4 @@ struct fechas {
 };
 void add(vector<map<string, string>>& BD);
 void imprimir(vector<map<string, string>>& BD);
+void delet_fe_evento(vector<map<string, string>>& BD);
