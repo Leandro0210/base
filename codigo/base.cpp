@@ -96,13 +96,23 @@ void delet_fe_evento(vector<map<string, string>>& BD) {
     p = h + "-" + m +"-"+ d;
     map<string, string> evento;
     evento[p] = eve.nom;
-    for (const auto& lp : BD) {
-        for (const auto& kv : lp) {
-    if(evento == lp) {
-     cout<<"QUEVEDO"<<endl;   
+    for (auto& lp : BD) {
+        for (auto kv : lp) {
+            map<string, string> descarga;
+            descarga[kv.first] = kv.second;
+
+            if (evento == descarga) {
+                lp.clear();
+                cout << "Deleted successfully" << endl;
+                break;
+            }
         }
-          }
-                   }
+    }
+
+    if (BD.empty()) {
+        cout << "Event not found" << endl;
+    }
+
     
 }
 void imprimir(vector<map<string, string>>& BD) {
