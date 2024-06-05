@@ -186,3 +186,74 @@ void delet_fecha(vector<map<string, string>>& BD) {
         cout << "Deleted " << contador << " events" << endl;
     
 }
+
+void find(vector<map<string, string>>& BD) {
+    fechas aho, mes, dia;
+    fechas eve;
+    string h, m, d;
+    cout<<"Introduce Año-Mes-Día: "<<endl;
+    cin>>aho.fe>>mes.fe>>dia.fe;
+    
+    if(aho.fe < 10) {
+        h = to_string(aho.fe);
+       h = "000" + h;
+    } else if (aho.fe < 100 ) {
+        h = to_string(aho.fe);
+       h = "00" + h;  
+    }   else if (aho.fe < 1000) {
+        h = to_string(aho.fe);
+        h = "0" + h; 
+    } else {
+       h = to_string(aho.fe);
+    } 
+    if(mes.fe>12) {
+        cout<<"Month value is invalid: "<<mes.fe<<endl;
+        exit(1);
+    }  else if(mes.fe < 10) {
+        m = to_string(mes.fe);
+        m = "0" + m;
+    } else {
+        m = to_string(mes.fe);
+    }
+    if (dia.fe > 31) {
+        cout<<"Day value is invalid: "<<dia.fe<<endl;
+    exit(1);
+    } else if (dia.fe < 10) {
+        d = to_string(dia.fe);
+        d = "0" + d;
+    } else {
+        d = to_string(dia.fe);
+    }
+     string p;
+    p = h + "-" + m +"-"+ d;
+    
+        cin.ignore();
+        
+        vector<string>v;
+    for(auto& lp : BD) {
+        for(auto& kv : lp) {
+            if(p == kv.first) {
+             v.push_back(kv.second); 
+               }
+            } 
+        }
+        int n = v.size();
+    for (int i = 0; i < n; ++i) {
+        int menor = i;
+        for (int j = i + 1; j < n; ++j) {
+            if (v[j] < v[menor]) {
+                menor = j;
+            }
+        }
+        // Intercambio manual de elementos
+        string temp = v[menor];
+        v[i] = v[menor];
+        v[menor] = temp;
+    }
+
+    // Imprimir el vector ordenado
+    cout <<"Eventos en esta fecha:" << endl;
+    for (const auto& palabra : v) {
+        cout << palabra << endl;
+    }
+}
