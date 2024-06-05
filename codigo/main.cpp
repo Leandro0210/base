@@ -1,7 +1,7 @@
 #include "base.h"
 
 int main() {
-  vector<map<string,string>>BD;
+   vector<map<string,string>>BD;
 
   string ca = "Add Fecha Evento";
   string ka = "add fecha evento";
@@ -25,7 +25,7 @@ int main() {
        delet_fe_evento(BD);
             }
             else if(com == ci || com == ki) {
-            cout<<"Ozy"<<endl;     }
+            delet_fecha(BD);     }
                  else if(com == co || com == ko) {
                 cout<<"Todavia"<<endl; }
                    else if(com == cu || com == ku) {

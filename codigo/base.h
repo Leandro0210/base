@@ -13,3 +13,4 @@ struct fechas {
 void add(vector<map<string, string>>& BD);
 void imprimir(vector<map<string, string>>& BD);
 void delet_fe_evento(vector<map<string, string>>& BD);
+void delet_fecha(vector<map<string, string>>& BD);

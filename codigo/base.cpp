@@ -127,3 +127,62 @@ void imprimir(vector<map<string, string>>& BD) {
     }
     
 }
+void delet_fecha(vector<map<string, string>>& BD) {
+    int contador = 0;
+    fechas aho, mes, dia;
+    string h, m, d;
+
+    cout << "Introduce Año-Mes-Día: " << endl;
+    cin >> aho.fe >> mes.fe >> dia.fe;
+
+    if (aho.fe < 10) {
+        h = "000" + to_string(aho.fe);
+    } else if (aho.fe < 100) {
+        h = "00" + to_string(aho.fe);
+    } else if (aho.fe < 1000) {
+        h = "0" + to_string(aho.fe);
+    } else {
+        h = to_string(aho.fe);
+    }
+
+    if (mes.fe > 12) {
+        cout << "Month value is invalid: " << mes.fe << endl;
+        exit(1);
+    } else if (mes.fe < 10) {
+        m = "0" + to_string(mes.fe);
+    } else {
+        m = to_string(mes.fe);
+    }
+
+    if (dia.fe > 31) {
+        cout << "Day value is invalid: " << dia.fe << endl;
+        exit(1);
+    } else if (dia.fe < 10) {
+        d = "0" + to_string(dia.fe);
+    } else {
+        d = to_string(dia.fe);
+    }
+
+    cin.ignore();
+    string p = h + "-" + m + "-" + d;
+
+    for (auto& lp : BD) {
+        // Creamos una lista temporal para almacenar las claves a eliminar
+        vector<string> keys_to_remove;
+        
+        // Iteramos por todas las entradas en el mapa lp
+        for (auto& kv : lp) {
+            if (kv.first == p) {
+                keys_to_remove.push_back(kv.first); // Añadir la clave a la lista de claves a eliminar
+                contador++;
+            }
+        }
+        
+        // Eliminamos las entradas especificadas en keys_to_remove
+        for (const auto& key : keys_to_remove) {
+            lp.erase(key);
+        }
+    }
+        cout << "Deleted " << contador << " events" << endl;
+    
+}
