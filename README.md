@@ -36,3 +36,6 @@ Las bases de datos también son útiles porque:
   -Print: Imprime todos los eventos con sus fechas de todo la BD, por orden de fechas.
   
   -Cerrar: Cuando el usuario quiera cerrar el programa, esta funcion lo hara.
+
+* Creditos : Leandro Miranda
+* Herramientas: C++, GitHub, Git Bash , Draw.io.
