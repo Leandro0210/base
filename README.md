@@ -22,8 +22,9 @@ Las bases de datos también son útiles porque:
    Bases de Datos NoSQL: Para manejar grandes cantidades de datos, Facebook utiliza bases de datos NoSQL como Cassandra y RocksDB, que ofrecen una gran escalabilidad y rendimiento.
    La razon por la que mi base de datos ha sido creada es pa beneficiar y sacar el maximo provecho a esta empresa, que podra guardar una gran cantidad de informacion de forma rapida y segura.
 * DESCRIPCION DE FUNCIONES Y ESTRUCTURAS
-- En mi codigo se usa una estructura la cual nos ayuda a almacenar las fechas de cada uno de los eventos.
-* Ahora en cuanto a funciones que se trata, existen 6 funciones
+ En mi codigo se usa una estructura la cual nos ayuda a almacenar las fechas de cada uno de los eventos.
+ Ahora en cuanto a funciones que se trata, existen 6 funciones:
+
   -Add: Agrega un evento con su fecha a la BD.
   
   -Del fecha evento: Elimina un evento con su fecha de la BD.
