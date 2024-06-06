@@ -25,8 +25,13 @@ Las bases de datos también son útiles porque:
 - En mi codigo se usa una estructura la cual nos ayuda a almacenar las fechas de cada uno de los eventos.
 * Ahora en cuanto a funciones que se trata, existen 6 funciones
   -Add: Agrega un evento con su fecha a la BD.
+  
   -Del fecha evento: Elimina un evento con su fecha de la BD.
+  
   -Del fechas: Elimina todos los eventos que existan en una fecha determinada.
+  
   -Find fechas: Imprime todos los eventos de una fecha determinada linea por linea respetando un orden ascendente.
+  
   -Print: Imprime todos los eventos con sus fechas de todo la BD, por orden de fechas.
+  
   -Cerrar: Cuando el usuario quiera cerrar el programa, esta funcion lo hara.
