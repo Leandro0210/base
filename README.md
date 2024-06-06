@@ -20,4 +20,4 @@ Las bases de datos también son útiles porque:
    La base de datos que usa Google es: Firebase Realtime Database es una base de datos alojada en la nube. Los datos se almacenan en formato JSON y se sincronizan en tiempo real con cada cliente conectado.
    Comparandolo con facebook que usa:
    Bases de Datos NoSQL: Para manejar grandes cantidades de datos, Facebook utiliza bases de datos NoSQL como Cassandra y RocksDB, que ofrecen una gran escalabilidad y rendimiento.
-   
+   La razon por la que mi base de datos ha sido creada es pa beneficiar y sacar el maximo provecho a esta empresa, que podra guardar una gran cantidad de informacion de forma rapida y segura.
